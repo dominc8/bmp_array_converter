@@ -7,6 +7,10 @@
 
 #define BITMAP_OK           0
 #define BITMAP_NULLPTR      1
+#define BITMAP_FH_MASK      0x0000FF00
+#define BITMAP_FH_SHIFT     8
+#define BITMAP_BH_MASK      0x00FF0000
+#define BITMAP_BH_SHIFT     16
 
 typedef struct bitmap_t
 {
