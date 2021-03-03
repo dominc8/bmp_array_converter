@@ -7,8 +7,11 @@ TEST_INCLUDE_DIRS := $(APP_INCLUDE_DIRS)
 TEST_INCLUDE_DIRS += cunit
 
 APP_SOURCES := $(wildcard ./src/*.c)
-TEST_SOURCES := $(wildcard ./cunit/Sources/**/*.c)
+APP_SOURCES := $(wildcard ./main.c)
+TEST_SOURCES := $(wildcard ./src/*.c)
+TEST_SOURCES += $(wildcard ./cunit/Sources/**/*.c)
 TEST_SOURCES += $(wildcard ./test/*.c)
+
 
 APP = bmp_array_converter
 TEST = test_bmp_array_converter
@@ -30,12 +33,21 @@ TEST_FLAGS += $(addprefix -I,$(TEST_INCLUDE_DIRS))
 FLAGS := $(DEBUG_FLAGS) 
 FLAGS += $(addprefix -I,$(APP_INCLUDE_DIRS))
 FLAGS += $(addprefix -I,$(TEST_INCLUDE_DIRS))
+#
+
+.PHONY: all
+
+all: $(APP) $(TEST)
+
 
 $(APP) : $(APP_OBJ)
 	$(CC) $(APP_FLAGS) -o $@ $^
 
 $(TEST) : $(TEST_OBJ)
 	$(CC) $(TEST_FLAGS) -o $@ $^
+
+run_test : $(TEST)
+	./$(TEST)
 
 -include $(DEP)
 

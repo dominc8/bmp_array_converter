@@ -1,10 +1,8 @@
 #include "CUnit/CUnitCI.h"
-
-void TEST_parser_fh(void);
-void TEST_parser_bh(void);
-
+#include "test_parser_fh.h"
+#include "test_parser_bh.h"
 
 CUNIT_CI_RUN("bmp_array_converter",
-        CUNIT_CI_TEST(TEST_parser_fh),
-        CUNIT_CI_TEST(TEST_parser_bh)
+        CUNIT_CI_PARSER_FH_TESTS,
+        CUNIT_CI_PARSER_BH_TESTS
 );

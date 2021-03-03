@@ -1,0 +1,322 @@
+[
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O0",
+      "-g3",
+      "-Wall",
+      "-fmessage-length=0",
+      "-Wno-unused-variable",
+      "-Iinc",
+      "-Iinc",
+      "-Icunit",
+      "-c",
+      "main.c",
+      "-o",
+      "main.c.o"
+    ],
+    "directory": "/home/dominik/repos/bmp_array_converter",
+    "file": "/home/dominik/repos/bmp_array_converter/main.c",
+    "output": "/home/dominik/repos/bmp_array_converter/main.c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O0",
+      "-g3",
+      "-Wall",
+      "-fmessage-length=0",
+      "-Wno-unused-variable",
+      "-Iinc",
+      "-Iinc",
+      "-Icunit",
+      "-c",
+      "src/parser_bh.c",
+      "-o",
+      "src/parser_bh.c.o"
+    ],
+    "directory": "/home/dominik/repos/bmp_array_converter",
+    "file": "/home/dominik/repos/bmp_array_converter/src/parser_bh.c",
+    "output": "/home/dominik/repos/bmp_array_converter/src/parser_bh.c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O0",
+      "-g3",
+      "-Wall",
+      "-fmessage-length=0",
+      "-Wno-unused-variable",
+      "-Iinc",
+      "-Iinc",
+      "-Icunit",
+      "-c",
+      "src/parser_fh.c",
+      "-o",
+      "src/parser_fh.c.o"
+    ],
+    "directory": "/home/dominik/repos/bmp_array_converter",
+    "file": "/home/dominik/repos/bmp_array_converter/src/parser_fh.c",
+    "output": "/home/dominik/repos/bmp_array_converter/src/parser_fh.c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O0",
+      "-g3",
+      "-Wall",
+      "-fmessage-length=0",
+      "-Wno-unused-variable",
+      "-Iinc",
+      "-Iinc",
+      "-Icunit",
+      "-c",
+      "cunit/Sources/Automated/Automated.c",
+      "-o",
+      "cunit/Sources/Automated/Automated.c.o"
+    ],
+    "directory": "/home/dominik/repos/bmp_array_converter",
+    "file": "/home/dominik/repos/bmp_array_converter/cunit/Sources/Automated/Automated.c",
+    "output": "/home/dominik/repos/bmp_array_converter/cunit/Sources/Automated/Automated.c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O0",
+      "-g3",
+      "-Wall",
+      "-fmessage-length=0",
+      "-Wno-unused-variable",
+      "-Iinc",
+      "-Iinc",
+      "-Icunit",
+      "-c",
+      "cunit/Sources/Basic/Basic.c",
+      "-o",
+      "cunit/Sources/Basic/Basic.c.o"
+    ],
+    "directory": "/home/dominik/repos/bmp_array_converter",
+    "file": "/home/dominik/repos/bmp_array_converter/cunit/Sources/Basic/Basic.c",
+    "output": "/home/dominik/repos/bmp_array_converter/cunit/Sources/Basic/Basic.c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O0",
+      "-g3",
+      "-Wall",
+      "-fmessage-length=0",
+      "-Wno-unused-variable",
+      "-Iinc",
+      "-Iinc",
+      "-Icunit",
+      "-c",
+      "cunit/Sources/CI/CUnitCI.c",
+      "-o",
+      "cunit/Sources/CI/CUnitCI.c.o"
+    ],
+    "directory": "/home/dominik/repos/bmp_array_converter",
+    "file": "/home/dominik/repos/bmp_array_converter/cunit/Sources/CI/CUnitCI.c",
+    "output": "/home/dominik/repos/bmp_array_converter/cunit/Sources/CI/CUnitCI.c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O0",
+      "-g3",
+      "-Wall",
+      "-fmessage-length=0",
+      "-Wno-unused-variable",
+      "-Iinc",
+      "-Iinc",
+      "-Icunit",
+      "-c",
+      "cunit/Sources/Console/Console.c",
+      "-o",
+      "cunit/Sources/Console/Console.c.o"
+    ],
+    "directory": "/home/dominik/repos/bmp_array_converter",
+    "file": "/home/dominik/repos/bmp_array_converter/cunit/Sources/Console/Console.c",
+    "output": "/home/dominik/repos/bmp_array_converter/cunit/Sources/Console/Console.c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O0",
+      "-g3",
+      "-Wall",
+      "-fmessage-length=0",
+      "-Wno-unused-variable",
+      "-Iinc",
+      "-Iinc",
+      "-Icunit",
+      "-c",
+      "cunit/Sources/Framework/CUError.c",
+      "-o",
+      "cunit/Sources/Framework/CUError.c.o"
+    ],
+    "directory": "/home/dominik/repos/bmp_array_converter",
+    "file": "/home/dominik/repos/bmp_array_converter/cunit/Sources/Framework/CUError.c",
+    "output": "/home/dominik/repos/bmp_array_converter/cunit/Sources/Framework/CUError.c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O0",
+      "-g3",
+      "-Wall",
+      "-fmessage-length=0",
+      "-Wno-unused-variable",
+      "-Iinc",
+      "-Iinc",
+      "-Icunit",
+      "-c",
+      "cunit/Sources/Framework/MessageHandlers.c",
+      "-o",
+      "cunit/Sources/Framework/MessageHandlers.c.o"
+    ],
+    "directory": "/home/dominik/repos/bmp_array_converter",
+    "file": "/home/dominik/repos/bmp_array_converter/cunit/Sources/Framework/MessageHandlers.c",
+    "output": "/home/dominik/repos/bmp_array_converter/cunit/Sources/Framework/MessageHandlers.c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O0",
+      "-g3",
+      "-Wall",
+      "-fmessage-length=0",
+      "-Wno-unused-variable",
+      "-Iinc",
+      "-Iinc",
+      "-Icunit",
+      "-c",
+      "cunit/Sources/Framework/MyMem.c",
+      "-o",
+      "cunit/Sources/Framework/MyMem.c.o"
+    ],
+    "directory": "/home/dominik/repos/bmp_array_converter",
+    "file": "/home/dominik/repos/bmp_array_converter/cunit/Sources/Framework/MyMem.c",
+    "output": "/home/dominik/repos/bmp_array_converter/cunit/Sources/Framework/MyMem.c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O0",
+      "-g3",
+      "-Wall",
+      "-fmessage-length=0",
+      "-Wno-unused-variable",
+      "-Iinc",
+      "-Iinc",
+      "-Icunit",
+      "-c",
+      "cunit/Sources/Framework/TestDB.c",
+      "-o",
+      "cunit/Sources/Framework/TestDB.c.o"
+    ],
+    "directory": "/home/dominik/repos/bmp_array_converter",
+    "file": "/home/dominik/repos/bmp_array_converter/cunit/Sources/Framework/TestDB.c",
+    "output": "/home/dominik/repos/bmp_array_converter/cunit/Sources/Framework/TestDB.c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O0",
+      "-g3",
+      "-Wall",
+      "-fmessage-length=0",
+      "-Wno-unused-variable",
+      "-Iinc",
+      "-Iinc",
+      "-Icunit",
+      "-c",
+      "cunit/Sources/Framework/TestRun.c",
+      "-o",
+      "cunit/Sources/Framework/TestRun.c.o"
+    ],
+    "directory": "/home/dominik/repos/bmp_array_converter",
+    "file": "/home/dominik/repos/bmp_array_converter/cunit/Sources/Framework/TestRun.c",
+    "output": "/home/dominik/repos/bmp_array_converter/cunit/Sources/Framework/TestRun.c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O0",
+      "-g3",
+      "-Wall",
+      "-fmessage-length=0",
+      "-Wno-unused-variable",
+      "-Iinc",
+      "-Iinc",
+      "-Icunit",
+      "-c",
+      "cunit/Sources/Framework/Util.c",
+      "-o",
+      "cunit/Sources/Framework/Util.c.o"
+    ],
+    "directory": "/home/dominik/repos/bmp_array_converter",
+    "file": "/home/dominik/repos/bmp_array_converter/cunit/Sources/Framework/Util.c",
+    "output": "/home/dominik/repos/bmp_array_converter/cunit/Sources/Framework/Util.c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O0",
+      "-g3",
+      "-Wall",
+      "-fmessage-length=0",
+      "-Wno-unused-variable",
+      "-Iinc",
+      "-Iinc",
+      "-Icunit",
+      "-c",
+      "test/main.c",
+      "-o",
+      "test/main.c.o"
+    ],
+    "directory": "/home/dominik/repos/bmp_array_converter",
+    "file": "/home/dominik/repos/bmp_array_converter/test/main.c",
+    "output": "/home/dominik/repos/bmp_array_converter/test/main.c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O0",
+      "-g3",
+      "-Wall",
+      "-fmessage-length=0",
+      "-Wno-unused-variable",
+      "-Iinc",
+      "-Iinc",
+      "-Icunit",
+      "-c",
+      "test/test_parser_bh.c",
+      "-o",
+      "test/test_parser_bh.c.o"
+    ],
+    "directory": "/home/dominik/repos/bmp_array_converter",
+    "file": "/home/dominik/repos/bmp_array_converter/test/test_parser_bh.c",
+    "output": "/home/dominik/repos/bmp_array_converter/test/test_parser_bh.c.o"
+  },
+  {
+    "arguments": [
+      "/usr/bin/gcc",
+      "-O0",
+      "-g3",
+      "-Wall",
+      "-fmessage-length=0",
+      "-Wno-unused-variable",
+      "-Iinc",
+      "-Iinc",
+      "-Icunit",
+      "-c",
+      "test/test_parser_fh.c",
+      "-o",
+      "test/test_parser_fh.c.o"
+    ],
+    "directory": "/home/dominik/repos/bmp_array_converter",
+    "file": "/home/dominik/repos/bmp_array_converter/test/test_parser_fh.c",
+    "output": "/home/dominik/repos/bmp_array_converter/test/test_parser_fh.c.o"
+  }
+]
