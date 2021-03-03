@@ -1,0 +1,5 @@
+*.o
+*.d
+bmp_array_converter
+test_bmp_array_converter
+*.xml
