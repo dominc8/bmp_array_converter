@@ -1,6 +1,6 @@
 #include "parser_fh.h"
 #include "stddef.h"
-#include "string.h"
+#include "utils.h"
 
 // Structure of proper file header
 // [1][0]           -> 0x4D42
@@ -11,8 +11,6 @@
 
 #define BITMAP_TYPE         ((uint16_t)(0x4D42))
 
-static inline uint16_t cast_16(uint8_t *ptr);
-static inline uint32_t cast_32(uint8_t *ptr);
 static int32_t parse_type(fh_handle_t handle, uint8_t *ptr);
 static int32_t parse_size(fh_handle_t handle, uint8_t *ptr);
 static int32_t parse_reserved(fh_handle_t handle, uint8_t *ptr);
@@ -81,19 +79,5 @@ static int32_t parse_offset(fh_handle_t handle, uint8_t *ptr)
     {
         return FH_OFFSET_ERR;
     }
-}
-
-static inline uint16_t cast_16(uint8_t *ptr)
-{
-    return ((uint16_t)ptr[0])
-            + ((uint16_t)ptr[1] << 8);
-}
-
-static inline uint32_t cast_32(uint8_t *ptr)
-{
-    return ((uint32_t)ptr[0])
-            + ((uint32_t)ptr[1] << 8)
-            + ((uint32_t)ptr[2] << 16)
-            + ((uint32_t)ptr[3] << 24);
 }
 
