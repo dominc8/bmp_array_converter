@@ -19,7 +19,7 @@ static int32_t parse_offset(fh_handle_t handle, uint8_t *ptr);
 
 int32_t fh_parse(fh_handle_t handle, uint8_t *data)
 {
-    if (handle == NULL || data == NULL)
+    if (NULL == handle || NULL == data)
     {
         return FH_NULLPTR;
     }

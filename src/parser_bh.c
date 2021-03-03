@@ -28,7 +28,7 @@ static int32_t parse_other_data(bh_handle_t handle, uint8_t *data);
 
 int32_t bh_parse(bh_handle_t handle, uint8_t *data)
 {
-    if (handle == NULL || data == NULL)
+    if (NULL == handle || NULL == data)
     {
         return BH_NULLPTR;
     }
