@@ -12,95 +12,99 @@ void parser_bh_nullptr(void)
     CU_ASSERT_EQUAL(bh_parse(NULL, &mem[0]), BH_NULLPTR);
 }
 
-#if 0
-void parser_fh_ret(void)
+void parser_bh_ret(void)
 {
-    fh_data_t fh_data;
-    uint8_t proper_fh_mem[FH_SIZE] = 
+    bh_data_t bh_data;
+    uint8_t proper_bh_mem[BH_SIZE] = 
     {
-        0x42, 0x4D,
-        0xD6, 0x23, 0x00, 0x00,
+        0x28, 0x00, 0x00, 0x00,
+        0x1d, 0x00, 0x00, 0x00,
+        0x2e, 0x00, 0x00, 0x00,
+        0x01, 0x00,
+        0x20, 0x00,
         0x00, 0x00, 0x00, 0x00,
-        0x36, 0x00, 0x00, 0x00
+        0xda, 0x14, 0x00, 0x00,
+        0x11, 0x17, 0x00, 0x00,
+        0x11, 0x17, 0x00, 0x00,
+        0x00, 0x00, 0x00, 0x00,
+        0x00, 0x00, 0x00, 0x00,
     };
-    int32_t ret_val =  fh_parse(&fh_data, &proper_fh_mem[0]);
-    CU_ASSERT_EQUAL(ret_val, FH_OK);
+    int32_t ret_val =  bh_parse(&bh_data, &proper_bh_mem[0]);
+    CU_ASSERT_EQUAL(ret_val, BH_OK);
 }
 
-void parser_fh_wrong_type(void)
+void parser_bh_wrong_header_size(void)
 {
-    fh_data_t fh_data;
-    uint8_t fh_mem[FH_SIZE] = 
+    bh_data_t bh_data;
+    uint8_t bh_mem[BH_SIZE] = 
     {
-        0x42, 0x00,
-        0x0E, 0x00, 0x00, 0x00,
+        0x29, 0x00, 0x00, 0x00,
+        0x1d, 0x00, 0x00, 0x00,
+        0x2e, 0x00, 0x00, 0x00,
+        0x01, 0x00,
+        0x20, 0x00,
         0x00, 0x00, 0x00, 0x00,
-        0x0E, 0x00, 0x00, 0x00
+        0xda, 0x14, 0x00, 0x00,
+        0x11, 0x17, 0x00, 0x00,
+        0x11, 0x17, 0x00, 0x00,
+        0x00, 0x00, 0x00, 0x00,
+        0x00, 0x00, 0x00, 0x00,
     };
-    int32_t ret_val =  fh_parse(&fh_data, &fh_mem[0]);
-    CU_ASSERT_EQUAL(ret_val, FH_TYPE_ERR);
+    int32_t ret_val =  bh_parse(&bh_data, &bh_mem[0]);
+    CU_ASSERT_EQUAL(ret_val, BH_HSIZE_ERR);
 }
 
-void parser_fh_wrong_size(void)
+void parser_bh_wrong_n_color_planes(void)
 {
-    fh_data_t fh_data;
-    uint8_t fh_mem[FH_SIZE] = 
+    bh_data_t bh_data;
+    uint8_t bh_mem[BH_SIZE] = 
     {
-        0x42, 0x4D,
+        0x28, 0x00, 0x00, 0x00,
+        0x1d, 0x00, 0x00, 0x00,
+        0x2e, 0x00, 0x00, 0x00,
+        0x00, 0x00,
+        0x20, 0x00,
+        0x00, 0x00, 0x00, 0x00,
+        0xda, 0x14, 0x00, 0x00,
+        0x11, 0x17, 0x00, 0x00,
+        0x11, 0x17, 0x00, 0x00,
         0x00, 0x00, 0x00, 0x00,
         0x00, 0x00, 0x00, 0x00,
-        0x0E, 0x00, 0x00, 0x00
     };
-    int32_t ret_val =  fh_parse(&fh_data, &fh_mem[0]);
-    CU_ASSERT_EQUAL(ret_val, FH_SIZE_ERR);
+    int32_t ret_val =  bh_parse(&bh_data, &bh_mem[0]);
+    CU_ASSERT_EQUAL(ret_val, BH_NCP_ERR);
 }
 
-void parser_fh_wrong_type_and_size(void)
+void parser_bh_data(void)
 {
-    fh_data_t fh_data;
-    uint8_t fh_mem[FH_SIZE] = 
+    bh_data_t bh_data;
+    uint8_t proper_bh_mem[BH_SIZE] = 
     {
-        0x42, 0x00,
+        0x28, 0x00, 0x00, 0x00,
+        0x1d, 0x00, 0x00, 0x00,
+        0x2e, 0x00, 0x00, 0x00,
+        0x01, 0x00,
+        0x20, 0x00,
+        0x00, 0x00, 0x00, 0x00,
+        0xda, 0x14, 0x00, 0x00,
+        0x11, 0x17, 0x00, 0x00,
+        0x11, 0x17, 0x00, 0x00,
         0x00, 0x00, 0x00, 0x00,
         0x00, 0x00, 0x00, 0x00,
-        0x0E, 0x00, 0x00, 0x00
     };
-    int32_t ret_val =  fh_parse(&fh_data, &fh_mem[0]);
-    CU_ASSERT_EQUAL(ret_val, FH_SIZE_ERR | FH_TYPE_ERR);
+    int32_t ret_val =  bh_parse(&bh_data, &proper_bh_mem[0]);
+    CU_ASSERT_EQUAL(ret_val, BH_OK);
+    CU_ASSERT_EQUAL(bh_data.header_size, (uint16_t)0x00000028);
+    CU_ASSERT_EQUAL(bh_data.img_width, (int32_t)0x0000001D);
+    CU_ASSERT_EQUAL(bh_data.img_height, (int32_t)0x0000002E);
+    CU_ASSERT_EQUAL(bh_data.n_color_planes, (uint16_t)0x0001);
+    CU_ASSERT_EQUAL(bh_data.n_bits_per_pixel, (uint16_t)0x0020);
+    CU_ASSERT_EQUAL(bh_data.compression, (uint32_t)0x00000000);
+    CU_ASSERT_EQUAL(bh_data.bitmap_size, (uint32_t)0x000014DA);
+    CU_ASSERT_EQUAL(bh_data.ppm_hor, (uint32_t)0x00001711);
+    CU_ASSERT_EQUAL(bh_data.ppm_ver, (uint32_t)0x00001711);
+    CU_ASSERT_EQUAL(bh_data.n_colors_in_palette, (uint32_t)0x00000000);
+    CU_ASSERT_EQUAL(bh_data.n_important_colors, (uint32_t)0x00000000);
 }
 
-void parser_fh_wrong_bitmap_offset(void)
-{
-    fh_data_t fh_data;
-    uint8_t fh_mem[FH_SIZE] = 
-    {
-        0x42, 0x4D,
-        0x0E, 0x00, 0x00, 0x00,
-        0x00, 0x00, 0x00, 0x00,
-        0x02, 0x00, 0x00, 0x00
-    };
-    int32_t ret_val =  fh_parse(&fh_data, &fh_mem[0]);
-    CU_ASSERT_EQUAL(ret_val, FH_OFFSET_ERR);
-}
-
-void parser_fh_data(void)
-{
-    fh_data_t fh_data;
-    uint8_t proper_fh_mem[FH_SIZE] = 
-    {
-        0x42, 0x4D,
-        0xD6, 0x23, 0x00, 0x00,
-        0x00, 0x00, 0x00, 0x00,
-        0x36, 0x00, 0x00, 0x00
-    };
-    int32_t ret_val =  fh_parse(&fh_data, &proper_fh_mem[0]);
-    CU_ASSERT_EQUAL(ret_val, FH_OK);
-    CU_ASSERT_EQUAL(fh_data.type, (uint16_t)0x4D42);
-    CU_ASSERT_EQUAL(fh_data.size_of_file, (uint32_t)0x000023D6);
-    CU_ASSERT_EQUAL(fh_data.reserved_1, (uint16_t)0x0000);
-    CU_ASSERT_EQUAL(fh_data.reserved_2, (uint16_t)0x0000);
-    CU_ASSERT_EQUAL(fh_data.bitmap_offset, (uint32_t)0x00000036);
-}
-
-#endif
 

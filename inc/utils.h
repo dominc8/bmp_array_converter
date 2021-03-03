@@ -17,5 +17,10 @@ static inline uint32_t cast_32(uint8_t *ptr)
             + ((uint32_t)ptr[3] << 24);
 }
 
+static inline int32_t cast_i32(uint8_t *ptr)
+{
+    return (int32_t)cast_32(ptr);
+}
+
 #endif /* UTILS_H */
 
