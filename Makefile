@@ -7,7 +7,7 @@ TEST_INCLUDE_DIRS := $(APP_INCLUDE_DIRS)
 TEST_INCLUDE_DIRS += cunit
 
 APP_SOURCES := $(wildcard ./src/*.c)
-APP_SOURCES := $(wildcard ./main.c)
+APP_SOURCES += $(wildcard ./main.c)
 TEST_SOURCES := $(wildcard ./src/*.c)
 TEST_SOURCES += $(wildcard ./cunit/Sources/**/*.c)
 TEST_SOURCES += $(wildcard ./test/*.c)

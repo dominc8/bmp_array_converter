@@ -1,8 +1,8 @@
 #include "stdio.h"
 #include "errno.h"
 #include "string.h"
-#include "parser_fh.h"
-#include "parser_bh.h"
+#include "bitmap_parser.h"
+#include "formatter.h"
 
 extern int errno;
 
@@ -33,6 +33,24 @@ int main(int argc, char **argv)
         return 2;
     }
 
+    /***********************/
+    bitmap_t bitmap_data;
+    int32_t status = bitmap_parse_file(&bitmap_data, f_bitmap);
+    if (BITMAP_OK == status)
+    {
+        if (OK == format_bitmap(&bitmap_data, f_output))
+        {
+            printf("Bitmap saved to file\n");
+        }
+        else
+        {
+            printf("Formatting bitmap failed\n");
+        }
+    }
+    else
+    {
+        printf("Parsing bitmap file failed with status %d\n", status);
+    }
     /***********************/
 
 
