@@ -3,3 +3,4 @@
 bmp_array_converter
 test_bmp_array_converter
 *.xml
+compile_commands.json
